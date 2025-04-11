@@ -1,21 +1,22 @@
-public class xYzAbC {
+public class SortArray {
   public static void main(String[] args){
-    int[] bCdEf = {23, 5, 67, 89, 12};
-    sortMe(bCdEf);
-    for (int i = 0; i < bCdEf.length; i++) {
-      System.out.println(bCdEf[i]);
+    int[] numbers = {23, 5, 67, 89, 12};
+    sortAscending(numbers);
+    for (int i = 0; i < numbers.length; i++) {
+      System.out.println(numbers[i]);
     }
   }
 
-  public static void sortMe(int[] qRsTu){
-    for(int aBcDe = 0; aBcDe < qRsTu.length; aBcDe++){
-      for(int fGhIj = 0; fGhIj < qRsTu.length; fGhIj++){
-        if(qRsTu[fGhIj] > qRsTu[fGhIj + 1]){
-          int temp = qRsTu[fGhIj];
-          qRsTu[fGhIj] = qRsTu[fGhIj + 1];
-          qRsTu[fGhIj + 1] = temp;
+  public static void sortAscending(int[] arr){
+    for(int i = 0; i < arr.length; i++){
+      for(int j = 0; j < arr.length - 1; j++){
+        if(arr[j] > arr[j + 1]){
+          int temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
         }
       }
     }
   }
 }
+
